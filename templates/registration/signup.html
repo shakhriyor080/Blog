@@ -1,0 +1,14 @@
+{% extends 'base.html'%}
+{% block title %} Ruyhatdan utish {% endblock title %}
+
+
+{% block content %}
+
+<h2>ruyhatdan utish</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Yuborish </button>
+</form>
+
+{% endblock content %}
