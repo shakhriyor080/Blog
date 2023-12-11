@@ -4,11 +4,12 @@
 
 
 {% block content %}
+<br><br><br>
 
-<h2 style="margin-left: 300px;">Saytga kirish</h2>
-<form action="" method="post" style="width: 500px; margin-left: 300px;">
+<form action="" method="post" class="w-25 position-absolute top-50 start-50 translate-middle ">
+    <h2 class="ms-5 " >Saytga kirish</h2>
     {% csrf_token %}
-    {{ form|crispy }}
+    {{ form|crispy }} 
     <button type="submit" class="btn btn-success">Kirish</button>
 </form>
 
