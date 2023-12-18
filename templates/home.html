@@ -4,12 +4,13 @@
 {% block content %}
 {% if user.is_authenticated %}
 {{user.username }}
-<p><a href="{% url 'logout' %}">chiqip ketish</a></p>
+<p class="mt-5"><a  href="{% url 'logout' %}">chiqip ketish</a></p>
+<a href="{% url 'article_list'%}"><button type="button" class="btn btn-primary">Postlarga o'tish</button></a>
 {% else %}
 
 <P>saytga kirmagansiz</P>
-<a href="{% url 'login'%}">Kirish</a>
-<a href="{% url 'signup' %}">Ro'yhatdan utish </a>
+<a class="mt-5" href="{% url 'login'%}">Kirish</a>
+<a class="mt-5" href="{% url 'signup' %}">Ro'yhatdan utish </a>
 
 {% endif %}
 {% endblock content %}
