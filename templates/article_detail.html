@@ -37,7 +37,7 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">{{object.title}}</h5>
-      <p class="card-text">{{object.body}}</p>
+      <p class="card-text">{{object.body | safe}}</p>
       <a href="{% url 'article_delete' article.pk%}" class="btn btn-danger">O'chirish</a> &nbsp;
       <a href="{%url 'article_edit' article.pk%}" class="btn btn-primary">Tahrirlash</a>
     </div>

@@ -8,6 +8,7 @@
 <form action="" method="post" enctype="multipart/form-data" class="w-50 mt-5 my-5 position-absolute top-50 start-50 translate-middle" >
     <p style="font-size: 30px;">Post Yaratish</p>
     {% csrf_token %}
+    {{ form.media }}
     {{ form|crispy}}
     <button type="submit" class="btn btn-primary">Saqlash</button>
 </form>
