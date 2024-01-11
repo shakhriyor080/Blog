@@ -43,5 +43,22 @@
     </div>
   </div>
 </div>
+
+<div class="card mt-5" style="width: 18rem;">
+  {% for comment in article.comments.all %}
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> Comment</li>
+    <li class="list-group-item">{{comment}}</li>
+    <li class="list-group-item"> {{comment.author}}</li>
+  </ul>
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
 {% endblock content %}
   

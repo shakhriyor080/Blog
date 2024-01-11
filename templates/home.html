@@ -2,6 +2,9 @@
 {% block title %} Bosh sahifa {% endblock title%}
 
 {% block content %}
+
+
+
 {% if user.is_authenticated %}
 {{user.username }} 
 <p class="mt-5"><a  href="{% url 'logout' %}">chiqip ketish</a></p>
@@ -9,9 +12,19 @@
 
 {% else %}
 
-<P class="mt-5 is-" style="font-size: 30px;" >saytga kirmagansiz</P>
-<a class="mt-5" href="{% url 'login'%}">Kirish</a> |
-<a class="mt-5" href="{% url 'signup' %}">Ro'yhatdan utish </a>
+
+<div class="card w-25 mt-5 position-absolute top-50 start-50 translate-middle " style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Shahriyor Qosimov </h5>
+      <!-- <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6> -->
+      <p class="card-text">SHahriyor Qosimov tomonidan yaratilgan blog dastur ,
+        bu yerda siz dasturchilar haqida malumotlar va dasturchilar uzlari qilgan ishlari joylab borishlari mumkun 
+      <a href="https://www.t.me/shahriyor_developer">Telegram</a>
+    </p>
+      <a href="{% url 'login'%}" class="card-link btn btn-outline-success">Kirish</a>
+      <a href=" {% url 'signup' %}" class="card-link btn btn-outline-info">Ro'yhatdan o'tish</a>
+    </div>
+  </div>
 
 {% endif %}
 {% endblock content %}
